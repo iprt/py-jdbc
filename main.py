@@ -50,10 +50,19 @@ def action_demo():
     action.close()
 
 
-# Press the green button in the gutter to run the script.
+def taos26_test():
+    action = JdbcAction(driver_class["taos2.0.38"],
+                        "jdbc:TAOS-RS://10.250.5.10:6041/demo",
+                        "root", "taosdata",
+                        drivers_path["taos2.0.38"])
+    rows = action.execute("""
+        show databases;
+    """)
+    for row in rows:
+        print(row)
+
+    action.close()
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-    local_mysql_test()
-
-    action_demo()
+    taos26_test()

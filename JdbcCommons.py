@@ -2,8 +2,8 @@ import jaydebeapi
 
 driver_class = {
     "mysql8": "com.mysql.cj.jdbc.Driver",
-    "dm8": "dm.jdbc.driver.DmDriver",
-    "taos2.0.8": "com.taosdata.jdbc.rs.RestfulDriver"
+    "taos2.0.38": "com.taosdata.jdbc.rs.RestfulDriver",
+    "dm8": "dm.jdbc.driver.DmDriver"
 }
 
 drivers_path = {
