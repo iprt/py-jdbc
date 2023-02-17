@@ -1,6 +1,6 @@
 import jaydebeapi
 
-driver_class = {
+drivers_class = {
     "mysql8": "com.mysql.cj.jdbc.Driver",
     "taos2.0.38": "com.taosdata.jdbc.rs.RestfulDriver",
     "dm8": "dm.jdbc.driver.DmDriver"
@@ -14,14 +14,14 @@ drivers_path = {
 
 
 class JdbcAction:
-    def __init__(self, driver, jdbcUrl, username, password, jarPath):
+    def __init__(self, driver, jdbc_url, username, password, jar_path):
         self.driverName = driver
-        self.jdbcUrl = jdbcUrl
+        self.jdbcUrl = jdbc_url
         self.username = username
         self.password = password
-        self.jarPath = jarPath
+        self.jarPath = jar_path
 
-        self.conn = jaydebeapi.connect(driver, jdbcUrl, [username, password], jarPath)
+        self.conn = jaydebeapi.connect(driver, jdbc_url, [username, password], jar_path)
 
     def execute(self, sql):
         curs = self.conn.cursor()
