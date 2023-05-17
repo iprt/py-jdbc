@@ -5,7 +5,8 @@
 import jaydebeapi
 import os
 
-from JdbcCommons import JdbcAction, drivers_class, drivers_path
+from JdbcCommons import JdbcAction
+from Constant import drivers_class, drivers_path
 
 
 def print_hi(name):
@@ -80,9 +81,24 @@ def taos26_test():
     action.close()
 
 
+def taos31_test():
+    action = JdbcAction(drivers_class["taos3.1.0"],
+                        "jdbc:TAOS-RS://a2.hy.vpn-ali.eblssmart.com:6041/zwdata",
+                        "root", "taosdata",
+                        drivers_path["taos3.1.0"]
+                        )
+    rows = action.execute("""
+        select * from wf_sba order by `time` desc limit 10
+    """)
+    for row in rows:
+        print(row)
+    action.close()
+
+
 if __name__ == '__main__':
     # set JAVA_HOME env
     os.environ["JAVA_HOME"] = "./jre"
     # local_mysql_test()
     # taos26_test()
-    action_demo()
+    # action_demo()
+    taos31_test()
