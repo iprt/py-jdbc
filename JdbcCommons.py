@@ -1,5 +1,6 @@
 import jaydebeapi
 
+
 class JdbcAction:
     def __init__(self, driver, jdbc_url, username, password, jar_path):
         self.driverName = driver
