@@ -1,7 +1,7 @@
 import os
 
 if __name__ == '__main__':
-    os.environ["JAVA_HOME"] = "C:/"
-    print("test env")
-    java_home = os.environ["JAVA_HOME"]
-    print("JAVA_HOME is", java_home)
+    print("set JAVA_HOME")
+    os.environ["JAVA_HOME"] = "./jre"
+
+    print("get JAVA_HOME :", os.environ["JAVA_HOME"])
