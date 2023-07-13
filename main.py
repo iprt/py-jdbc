@@ -23,7 +23,7 @@ def local_mysql_test():
           '&serverTimezone=Asia/Shanghai'
 
     user = 'root'
-    password = 'Root@123#'
+    password = 'root'
 
     driver = 'com.mysql.cj.jdbc.Driver'
 
