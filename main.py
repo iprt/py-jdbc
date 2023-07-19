@@ -49,7 +49,7 @@ def action_demo():
     action = JdbcAction(drivers_class["mysql8"],
                         "jdbc:mysql://172.100.1.100/mysql?characterEncoding=utf-8&autoReconnect=true"
                         "&failOverReadOnly=false&useSSL=false&serverTimezone=Asia/Shanghai",
-                        "root", "Root@123#",
+                        "root", "root",
                         drivers_path["mysql8"])
     first_sql = 'show tables'
     print("first sql is ===>", first_sql)
@@ -98,7 +98,7 @@ def taos31_test():
 if __name__ == '__main__':
     # set JAVA_HOME env
     os.environ["JAVA_HOME"] = "./jre"
-    # local_mysql_test()
+    local_mysql_test()
     # taos26_test()
     # action_demo()
-    taos31_test()
+    # taos31_test()
