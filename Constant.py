@@ -1,4 +1,3 @@
-
 drivers_class = {
     "mysql8": "com.mysql.cj.jdbc.Driver",
     "taos2.0.38": "com.taosdata.jdbc.rs.RestfulDriver",
