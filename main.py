@@ -5,8 +5,8 @@
 import jaydebeapi
 import os
 
-from JdbcCommons import JdbcAction
-from Constant import drivers_class, drivers_path
+from commons.JdbcCommons import JdbcAction
+from drivers.Constant import drivers_class, drivers_path
 
 
 def print_hi(name):
