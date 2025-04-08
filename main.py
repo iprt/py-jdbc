@@ -15,7 +15,7 @@ def print_hi(name):
 
 
 def local_mysql_test():
-    url = 'jdbc:mysql://172.100.1.100/mysql' \
+    url = 'jdbc:mysql://dev.iproute.org/mysql' \
           '?characterEncoding=utf-8' \
           '&autoReconnect=true' \
           '&failOverReadOnly=false' \
@@ -47,7 +47,7 @@ def local_mysql_test():
 
 def action_demo():
     action = JdbcAction(drivers_class["mysql8"],
-                        "jdbc:mysql://172.100.1.100/mysql?characterEncoding=utf-8&autoReconnect=true"
+                        "jdbc:mysql://dev.iproute.org/mysql?characterEncoding=utf-8&autoReconnect=true"
                         "&failOverReadOnly=false&useSSL=false&serverTimezone=Asia/Shanghai",
                         "root", "root",
                         drivers_path["mysql8"])
@@ -83,7 +83,7 @@ def taos26_test():
 
 def taos31_test():
     action = JdbcAction(drivers_class["taos3.1.0"],
-                        "jdbc:TAOS-RS://a2.hy.vpn-ali.eblssmart.com:6041/zwdata",
+                        "jdbc:TAOS-RS://dev.iproute.org:6041/iot_data",
                         "root", "taosdata",
                         drivers_path["taos3.1.0"]
                         )
